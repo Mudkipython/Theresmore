@@ -17,17 +17,21 @@ MainStore.ResourcesStore.addResource("luck",999);
 MainStore.StatsStore.setStat("ng_bonus",99999)
 
 //资源
-MainStore = Object.values(document.querySelector("#main-tabs"))[1].children._owner.stateNode.props.MainStore
-MainStore.ResourcesStore.addResource("gold", 999999)
-MainStore.ResourcesStore.addResource("food", 999999)
-MainStore.ResourcesStore.addResource("wood", 999999)
-MainStore.ResourcesStore.addResource("stone", 999999)
-MainStore.ResourcesStore.addResource("research", 999999)
-MainStore.ResourcesStore.addResource("faith", 999999)
-MainStore.ResourcesStore.addResource("mana", 999999)
-MainStore.ResourcesStore.addResource("iron", 999999)
-MainStore.ResourcesStore.addResource("steel", 999999)
-MainStore.ResourcesStore.addResource("crystal", 999999)
-MainStore.ResourcesStore.addResource("supply", 999999)
-MainStore.ResourcesStore.addResource("nitre", 999999)
-MainStore.ResourcesStore.addResource("deep", 999999)
+MainStore = Object.values(document.querySelector("#main-tabs"))[1]
+  .children._owner.stateNode.props.MainStore
+
+MainStore.ResourcesStore.addResource("gold", 999999)      // 黄金
+MainStore.ResourcesStore.addResource("food", 999999)      // 食物
+MainStore.ResourcesStore.addResource("wood", 999999)      // 木材
+MainStore.ResourcesStore.addResource("stone", 999999)     // 石头
+MainStore.ResourcesStore.addResource("research", 999999)  // 研究点
+MainStore.ResourcesStore.addResource("faith", 999999)     // 信念
+MainStore.ResourcesStore.addResource("mana", 999999)      // 法力
+MainStore.ResourcesStore.addResource("copper", 999999)    // 铜
+MainStore.ResourcesStore.addResource("iron", 999999)      // 铁
+MainStore.ResourcesStore.addResource("tools", 999999)     // 工具
+MainStore.ResourcesStore.addResource("steel", 999999)     // 钢
+MainStore.ResourcesStore.addResource("crystal", 999999)   // 水晶
+MainStore.ResourcesStore.addResource("supply", 999999)    // 补给
+MainStore.ResourcesStore.addResource("nitre", 999999)     // 硝石
+MainStore.ResourcesStore.addResource("deep", 999999)      // 钠红石
