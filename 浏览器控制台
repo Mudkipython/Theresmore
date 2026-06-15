@@ -1,18 +1,17 @@
-打开游戏页面后打开浏览器控制台使用
-
 //每次打开页面或者刷新页面都要先运行一次
 MainStore = Object.values(document.querySelector("#main-tabs"))[1].children._owner.stateNode.props.MainStore
 
 //转生升级需要的资源，建议不要复制多行运行，按需执行，数量自己改，下同
-MainStore.ResourcesStore.addResource("gem",200); //宝石
-MainStore.ResourcesStore.addResource("relic",200); //遗物
-MainStore.ResourcesStore.addResource("light",200); //光明
-MainStore.ResourcesStore.addResource("tome_wisdom",200); //智慧卷轴
-MainStore.ResourcesStore.addResource("titan_gift",200); //泰坦的礼物
-MainStore.ResourcesStore.addResource("legacy",9000); //传承点
+MainStore.ResourcesStore.addResource("gem",999); //宝石
+MainStore.ResourcesStore.addResource("relic",999); //遗物
+MainStore.ResourcesStore.addResource("light",999); //光明
+MainStore.ResourcesStore.addResource("tome_wisdom",999); //智慧卷轴
+MainStore.ResourcesStore.addResource("titan_gift",999); //泰坦的礼物
+MainStore.ResourcesStore.addResource("legacy",999); //传承点
+MainStore.ResourcesStore.addResource("coin",999); //代币
 
 //幸运石
-MainStore.ResourcesStore.addResource("luck",200);
+MainStore.ResourcesStore.addResource("luck",999);
 
 //超转生加成
-MainStore.StatsStore.setStat("ng_bonus",2000)
+MainStore.StatsStore.setStat("ng_bonus",99999)
