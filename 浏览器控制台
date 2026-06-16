@@ -1,39 +1,45 @@
-//每次打开页面或者刷新页面都要先运行一次
-MainStore = Object.values(document.querySelector("#main-tabs"))[1].children._owner.stateNode.props.MainStore
-
-//转生升级需要的资源，建议不要复制多行运行，按需执行，数量自己改，下同
-MainStore.ResourcesStore.addResource("gem",999); //宝石
-MainStore.ResourcesStore.addResource("relic",999); //遗物
-MainStore.ResourcesStore.addResource("light",999); //光明
-MainStore.ResourcesStore.addResource("tome_wisdom",999); //智慧卷轴
-MainStore.ResourcesStore.addResource("titan_gift",999); //泰坦的礼物
-MainStore.ResourcesStore.addResource("legacy",999); //传承点
-MainStore.ResourcesStore.addResource("coin",999); //代币
-
-//幸运石
-MainStore.ResourcesStore.addResource("luck",999);
-
-//超转生加成
-MainStore.StatsStore.setStat("ng_bonus",99999)
-
-//资源
+// 每次刷新页面后先运行一次
 MainStore = Object.values(document.querySelector("#main-tabs"))[1]
   .children._owner.stateNode.props.MainStore
 
-MainStore.ResourcesStore.addResource("gold", 999999)      // 黄金
-MainStore.ResourcesStore.addResource("food", 999999)      // 食物
-MainStore.ResourcesStore.addResource("wood", 999999)      // 木材
-MainStore.ResourcesStore.addResource("stone", 999999)     // 石头
-MainStore.ResourcesStore.addResource("research", 999999)  // 研究点
-MainStore.ResourcesStore.addResource("faith", 999999)     // 信念
-MainStore.ResourcesStore.addResource("mana", 999999)      // 法力
-MainStore.ResourcesStore.addResource("copper", 999999)    // 铜
-MainStore.ResourcesStore.addResource("iron", 999999)      // 铁
-MainStore.ResourcesStore.addResource("tools", 999999)     // 工具
-MainStore.ResourcesStore.addResource("cow", 999999)     // 牛
-MainStore.ResourcesStore.addResource("horse", 999999)     // 马
-MainStore.ResourcesStore.addResource("steel", 999999)     // 钢
-MainStore.ResourcesStore.addResource("crystal", 999999)   // 水晶
-MainStore.ResourcesStore.addResource("supply", 999999)    // 补给
-MainStore.ResourcesStore.addResource("nitre", 999999)     // 硝石
-MainStore.ResourcesStore.addResource("deep", 999999)      // 钠红石
+// 数量可以自己改
+const AMOUNT = 999999999
+
+// 普通基础资源
+MainStore.ResourcesStore.addResource("gold", AMOUNT)              // 黄金
+MainStore.ResourcesStore.addResource("food", AMOUNT)              // 食物
+MainStore.ResourcesStore.addResource("wood", AMOUNT)              // 木材
+MainStore.ResourcesStore.addResource("stone", AMOUNT)             // 石头
+MainStore.ResourcesStore.addResource("research", AMOUNT)          // 研究
+MainStore.ResourcesStore.addResource("faith", AMOUNT)             // 信念
+MainStore.ResourcesStore.addResource("mana", AMOUNT)              // 法力
+
+// 远古 / 青铜 / 铁器资源
+MainStore.ResourcesStore.addResource("tools", AMOUNT)             // 工具
+MainStore.ResourcesStore.addResource("copper", AMOUNT)            // 铜
+MainStore.ResourcesStore.addResource("iron", AMOUNT)              // 铁
+
+// 动物资源
+MainStore.ResourcesStore.addResource("cow", AMOUNT)               // 牛
+MainStore.ResourcesStore.addResource("horse", AMOUNT)             // 马
+
+// 中后期资源
+MainStore.ResourcesStore.addResource("building_material", AMOUNT) // 原料
+MainStore.ResourcesStore.addResource("steel", AMOUNT)             // 钢
+MainStore.ResourcesStore.addResource("crystal", AMOUNT)           // 水晶
+MainStore.ResourcesStore.addResource("supplies", AMOUNT)          // 补给
+MainStore.ResourcesStore.addResource("saltpetre", AMOUNT)         // 硝石
+MainStore.ResourcesStore.addResource("natronite", AMOUNT)         // 钠红石
+
+// 声誉 / 幸运类
+MainStore.ResourcesStore.addResource("fame", AMOUNT)              // 声誉
+MainStore.ResourcesStore.addResource("luck", AMOUNT)              // 幸运石
+
+// 转生 / 传承特殊资源
+MainStore.ResourcesStore.addResource("legacy", AMOUNT)            // 传承点
+MainStore.ResourcesStore.addResource("relic", AMOUNT)             // 遗物
+MainStore.ResourcesStore.addResource("coin", AMOUNT)              // 代币
+MainStore.ResourcesStore.addResource("tome_wisdom", AMOUNT)       // 智慧卷轴
+MainStore.ResourcesStore.addResource("gem", AMOUNT)               // 宝石
+MainStore.ResourcesStore.addResource("titan_gift", AMOUNT)        // 泰坦的礼物
+MainStore.ResourcesStore.addResource("light", AMOUNT)             // 光明
